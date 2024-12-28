@@ -1,0 +1,56 @@
+:root{
+  --main-color-bg: rgb(238, 210, 182);
+  --main-color-outer-box: rgb(151, 124, 96);
+  --main-color-inner-div: rgb(194, 169, 154);
+  --div--outer-layout-size: 40vh;
+  --default-border-radius: 7px;
+  background-color: var(--main-color-bg);
+
+
+}
+.outer-div--square{
+  width: var(--div--outer-layout-size);
+  height: var(--div--outer-layout-size);
+  width: auto;
+  height: auto;
+  background-color: var(--main-color-outer-box);
+  border-radius: var(--default-border-radius);
+  display: grid;
+  grid-template-columns: 10vw 10vw 10vw  10vw ;
+  grid-template-rows: 10vw 10vw 10vw 10vw ;
+  row-gap: 1vw;
+  column-gap: 1vw;
+  position: absolute;
+  padding: 1vw;
+  top: 25%;
+  
+  left:calc((100vw - 50vh)/2);
+}
+.inner-div--square{
+  width: auto;
+  background-color: var(--main-color-inner-div);
+  border-radius: var(--default-border-radius);
+  box-sizing: border-box;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  flex-direction: column;
+  align-items: center;
+  animation-fill-mode: forwards;
+}
+
+.light{
+  background-color: antiquewhite;
+}
+
+span{
+  font-size: 7vw;
+}
+
+@keyframes example {
+  0%   {transform: translate(-100%, 0%);}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {transform: translate(0%, 0%);}
+}
